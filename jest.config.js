@@ -3,6 +3,7 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.{js}',
     '!src/example/**/*.{js}',
+    '!src/index.js',
     '!**/node_modules/**',
     '!**/vendor/**',
     '!**/dist/**',
