@@ -1,7 +1,4 @@
-const {
-  SCHEMA_ALREADY_REGISTERED,
-  SCHEMA_NOT_EXIST,
-} = require('../../services/errors');
+const { SCHEMA_ALREADY_REGISTERED, SCHEMA_NOT_EXIST } = require('../errors');
 
 const key = 'test';
 

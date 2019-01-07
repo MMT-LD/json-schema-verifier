@@ -13,7 +13,7 @@ const validateRequest = (schema, validate = 'body', ext = '.json') => (
     );
   const { validator } = getRawSchema(`${schema}${ext}`);
   const valid = validator(req[validate]);
-  if (!valid) next(SCHEMA_VALIDATION_ERRORS(validator.errors));
+  if (!valid) return next(SCHEMA_VALIDATION_ERRORS(validator.errors));
   return next();
 };
 
