@@ -1,0 +1,52 @@
+{
+  "name": "json-schema-verifier",
+  "description": "validation middleware for express routes using ajv",
+  "version": "0.0.1",
+  "author": "MMT-LD",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development ./node_modules/nodemon/bin/nodemon.js nodemon",
+    "clean": "rimraf dist",
+    "build": "yarn clean && cross-env NODE_ENV=production babel ./src -d ./dist",
+    "lint": "eslint --fix --ext .js ./src",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "prepublish": "yarn run lint && yarn run test && yarn run build"
+  },
+  "dependencies": {
+    "ajv": "^6.6.1",
+    "debug": "^4.1.1",
+    "lodash.get": "^4.4.2",
+    "recursive-readdir": "^2.2.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/runtime": "^7.2.0",
+    "babel-core": "^7.0.0-bridge",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "compression": "^1.7.3",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "express": "^4.16.4",
+    "jest": "^23.6.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.9",
+    "prettier": "^1.15.3",
+    "regenerator-runtime": "^0.13.1",
+    "rimraf": "^2.6.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

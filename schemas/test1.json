@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "email": {
+      "type": "string",
+      "description": "email address"
+    },
+    "test": {
+      "type": "string",
+      "description": "test"
+    },
+    "test_name": {
+      "type": "string",
+      "description": "test name"
+    }
+  },
+  "anyOf": [{ "required": ["email"] }, { "required": ["test"] }]
+}

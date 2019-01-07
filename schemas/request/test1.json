@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "email": {
+      "type": "string",
+      "description": "email address"
+    },
+    "test": {
+      "type": "string",
+      "description": "test"
+    },
+    "test_name": {
+      "type": "string",
+      "description": "test_name for something"
+    },
+    "places":{
+        "$ref":"places.json#"
+      },
+      "vegetables": {
+        "type": "array",
+        "items": { "$ref": "request/veggies.json" }
+      }
+  },
+  "required": [ "places", "vegetables" ],
+  "anyOf": [{ "required": ["email"] }, { "required": ["test"] }]
+}

@@ -1,0 +1,10 @@
+{
+    "type": "object",
+    "properties": {
+      "place":{
+        "$ref":"places.json#"
+      }
+    },
+    "required":["place"],
+    "additionalProperties":false
+  }

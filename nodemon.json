@@ -1,0 +1,5 @@
+{
+  "verbose": false,
+  "watch": ["src", "schemas"],
+  "exec": "DEBUG='ajv:wrapper' yarn babel-node src/example/express.js"
+}
